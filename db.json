@@ -1,0 +1,26 @@
+{
+    "players" :[
+        {
+            "id": "1",
+            "name":"Zinedine Zidane" ,
+            "country":"Europe"
+        } ,
+        {
+            "id": "2",
+            "name":"Nayer Aguert" ,
+            "country":"Morocco"
+        } ,
+        {
+            "id": "3",
+            "name":"Odil Akhmedov" ,
+            "country":"Asia"
+        } 
+    ],
+    "filters" :[
+        {"id":"all" , "label":"All"} ,
+        {"id":"europe" , "label":"Europe"} ,
+        {"id":"asia" , "label":"Asia"} ,
+        {"id":"africa" , "label":"Africa"} ,
+        {"id":"america" , "label":"America"} 
+    ]
+}
