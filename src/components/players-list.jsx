@@ -11,7 +11,7 @@ import Error from "./error.jsx"
 import Empty from "./empty.jsx";
 import PlayerListItem from "./player-list-items.jsx";
 const PlayersList = () => {
-  const {players, playersLaodingStatus} = useSelector(state=>state)
+  const {players, playersLaodingStatus} = useSelector(state => state)
   const dispatch = useDispatch()
   const {request} = useHttps()
 
@@ -21,7 +21,6 @@ const PlayersList = () => {
   request("http://localhost:3000/players")
   .then(data =>
     dispatch(playersFetched(data ,  console.log(data))))
-    
   .catch(()=> dispatch(playersFetchingError()))
   } , [])
 
@@ -33,8 +32,8 @@ const PlayersList = () => {
     return <Error />
   }
 const renderPlayers = () =>{
-  if(!players.length){
-    return <Empty />
+  if (!players.length) { 
+    return <Empty />;
   }
   return players.map(({id , ...props} ) =>{
     <PlayerListItem key={id} {...props }/>
@@ -43,10 +42,8 @@ const renderPlayers = () =>{
 
   console.log(players);
   return (
-    <div>
+    <div className="flex flex-col space-y-3">
     { renderPlayers() }
-
-
     </div>
   );
 };
